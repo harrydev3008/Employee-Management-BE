@@ -7,7 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.harry.EmployeeManagementBE.exception.EmployeeAlreadyExistException;
-import com.harry.EmployeeManagementBE.model.dto.request.EmployeeInfoReq;
+import com.harry.EmployeeManagementBE.exception.EmployeeNotFoundException;
+import com.harry.EmployeeManagementBE.model.dtos.employeeDTO.EmployeeInfoReq;
 import com.harry.EmployeeManagementBE.model.entity.Employee;
 import com.harry.EmployeeManagementBE.repository.EmployeeRepository;
 import com.harry.EmployeeManagementBE.services.IEmployeeService;
@@ -46,7 +47,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public ResponseEntity<?> deleteEmployee(Long employeeId) {
 
         if (!employeeRepository.existsById(employeeId))
-            throw new EmployeeAlreadyExistException("Employee not exists!", HttpStatus.NOT_FOUND);
+            throw new EmployeeNotFoundException("Employee not exists!", HttpStatus.NOT_FOUND);
 
         employeeRepository.deleteById(employeeId);
 

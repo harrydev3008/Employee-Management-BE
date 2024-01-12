@@ -19,4 +19,14 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(exc.getHttpStatus().value()).body(errorResponse);
     }
+
+    @ExceptionHandler(EmployeeNotFoundException.class)
+    public ResponseEntity<?> EmployeeNotFoundException(EmployeeNotFoundException exc) {
+
+        Map<String, Object> errorResponse = new HashMap<>();
+        errorResponse.put("error_message", exc.getLocalizedMessage());
+        errorResponse.put("error_code", exc.getHttpStatus().value());
+
+        return ResponseEntity.status(exc.getHttpStatus().value()).body(errorResponse);
+    }
 }

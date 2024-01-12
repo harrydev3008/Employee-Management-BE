@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
-import com.harry.EmployeeManagementBE.model.dto.request.EmployeeInfoReq;
+import com.harry.EmployeeManagementBE.model.dtos.employeeDTO.EmployeeInfoReq;
 import com.harry.EmployeeManagementBE.model.entity.Employee;
 
 public interface IEmployeeService {

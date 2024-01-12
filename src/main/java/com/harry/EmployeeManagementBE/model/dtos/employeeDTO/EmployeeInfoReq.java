@@ -1,4 +1,4 @@
-package com.harry.EmployeeManagementBE.model.dto.request;
+package com.harry.EmployeeManagementBE.model.dtos.employeeDTO;
 
 import java.sql.Date;
 

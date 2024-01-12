@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.harry.EmployeeManagementBE.model.dto.request.EmployeeInfoReq;
+import com.harry.EmployeeManagementBE.model.dtos.employeeDTO.EmployeeInfoReq;
 import com.harry.EmployeeManagementBE.model.entity.Employee;
 import com.harry.EmployeeManagementBE.services.IEmployeeService;
 
